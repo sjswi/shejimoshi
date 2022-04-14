@@ -52,6 +52,7 @@ type LeatherShoeDecorator struct {
 
 func (l *LeatherShoeDecorator) Decorate() {
 	//子类重写
+
 	fmt.Println("一双深色休闲皮鞋")
 	l.decorated.Decorate()
 }
