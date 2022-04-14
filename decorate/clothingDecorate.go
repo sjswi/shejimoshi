@@ -21,9 +21,9 @@ func (c *clothesDecorate) Decoratefun(de decorate) {
 }
 func (c *clothesDecorate) wear() {
 	//子类重写
-
-	c.Decorate()
 	c.Wear()
+	c.Decorate()
+
 }
 
 type CasualPantDecorateor struct {
@@ -32,8 +32,8 @@ type CasualPantDecorateor struct {
 
 func (c *CasualPantDecorateor) Decorate() {
 	//子类重写
-	fmt.Println("一条卡其色休闲裤")
 	c.wear()
+	fmt.Println("一条卡其色休闲裤")
 }
 
 type BeltDecorator struct {
@@ -42,8 +42,9 @@ type BeltDecorator struct {
 
 func (b *BeltDecorator) Decorate() {
 	//子类重写
-	fmt.Println("一条银色针扣头的黑色腰带")
 	b.decorated.Decorate()
+	fmt.Println("一条银色针扣头的黑色腰带")
+
 }
 
 type LeatherShoeDecorator struct {
@@ -52,9 +53,9 @@ type LeatherShoeDecorator struct {
 
 func (l *LeatherShoeDecorator) Decorate() {
 	//子类重写
-
-	fmt.Println("一双深色休闲皮鞋")
 	l.decorated.Decorate()
+	fmt.Println("一双深色休闲皮鞋")
+
 }
 
 type KnittedSweaterDecorator struct {
@@ -63,8 +64,9 @@ type KnittedSweaterDecorator struct {
 
 func (k *KnittedSweaterDecorator) Decorate() {
 	//子类重写
-	fmt.Println("一件紫红色针织毛衣")
 	k.decorated.Decorate()
+	fmt.Println("一件紫红色针织毛衣")
+
 }
 
 type WhiteShirtDecorator struct {
@@ -73,8 +75,8 @@ type WhiteShirtDecorator struct {
 
 func (w *WhiteShirtDecorator) Decorate() {
 	//子类重写
-	fmt.Println("一件白色衬衫")
 	w.decorated.Decorate()
+	fmt.Println("一件白色衬衫")
 }
 
 type GlassesDecorator struct {
@@ -83,6 +85,7 @@ type GlassesDecorator struct {
 
 func (g *GlassesDecorator) Decorate() {
 	//子类重写
-	fmt.Println("一副方形黑框眼睛")
 	g.decorated.Decorate()
+	fmt.Println("一副方形黑框眼睛")
+
 }
